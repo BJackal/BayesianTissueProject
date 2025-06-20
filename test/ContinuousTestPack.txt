@@ -1,1 +1,3 @@
-TestHello.hpp
+TestHello_BayesianTissueProject.hpp
+TestPaperCommandLineVertexSimulation.hpp
+TestPaperVertexSimulation.hpp
