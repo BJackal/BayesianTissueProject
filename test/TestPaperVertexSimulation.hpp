@@ -183,7 +183,7 @@ public:
         /* We are now in a position to create and configure the cell-based simulation object, pass a force law to it,
          * and run the simulation. */
         OffLatticeSimulation<2> simulator(cell_population);
-        simulator.SetOutputDirectory("TestDeltaNotchEdgeOnlyODESimulation1");
+        simulator.SetOutputDirectory("TestBaysianSimulation");
         simulator.SetSamplingTimestepMultiple(10);
         simulator.SetDt(0.01);
         simulator.SetEndTime(700.00);
