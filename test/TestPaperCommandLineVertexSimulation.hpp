@@ -61,7 +61,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "CellDataItemWriter.hpp"
 #include "CellProliferativeTypesCountWriter.hpp"
 #include "CellMutationStatesCountWriter.hpp"
-#include "CellLocationWriter.hpp"
 #include "CellPropertyRegistry.hpp"
 #include "SmartPointers.hpp"
 #include "WildTypeCellMutationState.hpp"
