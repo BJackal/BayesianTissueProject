@@ -66,7 +66,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "WildTypeCellMutationState.hpp"
 #include "StemCellProliferativeType.hpp"
 
-#include "VertexBoundaryRefinementModifier.hpp"
+#include "CommandLineArguments.hpp"
 
 
 /**
