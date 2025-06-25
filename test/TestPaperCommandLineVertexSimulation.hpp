@@ -153,7 +153,6 @@ public:
 
         cell_population.AddCellWriter<CellProliferativePhasesWriter>();
         cell_population.AddCellWriter<CellAgesWriter>();
-        cell_population.AddCellWriter<CellLocationWriter>();
 
         //cell_population.rGetMesh().SetCellRearrangementThreshold(0.2);
 
