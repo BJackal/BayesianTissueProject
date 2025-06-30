@@ -16,6 +16,7 @@ Writer outputs from Chaste that are necessary:
 - [] Polygon number correlation
 - [] Neighbour Areas
 - [] Neighbour numbers
+- [x] Neighbour numbers correlation
 - [x] Laser recoil (Believe this is the Farhardifar force output but need to double check)
 - [] Area asymetry
 - [] Perimeter asymetry
