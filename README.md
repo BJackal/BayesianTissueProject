@@ -12,7 +12,7 @@ Writer outputs from Chaste that are necessary:
 - [x] Edge length
 - [] Cell elongation
 - [] Area deviation
-- [] Area correlation
+- [x] Area correlation (Outputs may need varificaiton as initialy produces nans)
 - [] Polygon number correlation
 - [] Neighbour Areas
 - [] Neighbour numbers
