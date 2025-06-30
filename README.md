@@ -7,18 +7,18 @@ Testing requirements:
     
 Writer outputs from Chaste that are necessary:
 - [x] Polygon Number - Usable version from Ecad ADD
-- [] Area Ratios
+- [ ] Area Ratios
 - [x] Cell perimeter - ADD
 - [x] Edge length
 - [x] Cell elongation
-- [] Area deviation
+- [ ] Area deviation
 - [x] Area correlation (Outputs may need varificaiton as initialy produces nans)
-- [] Polygon number correlation
+- [ ] Polygon number correlation
 - [x] Neighbour Areas
 - [x] Neighbour numbers
 - [x] Neighbour numbers correlation
 
 Need looking at further
-- [] Laser recoil
-- [] Area asymetry
-- [] Perimeter asymetry
+- [ ] Laser recoil
+- [ ] Area asymetry
+- [ ] Perimeter asymetry
