@@ -6,17 +6,19 @@ Testing requirements:
 - [x] Functionality for test to interact with command line inputs
     
 Writer outputs from Chaste that are necessary:
-- [] Polygon Number
+- [x] Polygon Number - Usable version from Ecad ADD
 - [] Area Ratios
-- [] Cell perimeter
+- [x] Cell perimeter - ADD
 - [x] Edge length
-- [] Cell elongation
+- [x] Cell elongation
 - [] Area deviation
 - [x] Area correlation (Outputs may need varificaiton as initialy produces nans)
 - [] Polygon number correlation
-- [] Neighbour Areas
-- [] Neighbour numbers
+- [x] Neighbour Areas
+- [x] Neighbour numbers
 - [x] Neighbour numbers correlation
-- [x] Laser recoil (Believe this is the Farhardifar force output but need to double check)
+
+Need looking at further
+- [] Laser recoil
 - [] Area asymetry
 - [] Perimeter asymetry
