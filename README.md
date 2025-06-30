@@ -1,11 +1,12 @@
 # A Chaste User Project for inputing specific parameters from CSV into a Chaste simulation at command line
 More will be added here soon for how to run this. 
 
-Testing requirements:
+**Testing requirements**
 - [x] Working Base Test
 - [x] Functionality for test to interact with command line inputs
     
-Writer outputs from Chaste that are necessary:
+**Writer outputs from Chaste that are necessary**
+
 - [x] Polygon Number - Usable version from Ecad ADD
 - [ ] Area Ratios
 - [x] Cell perimeter - ADD
@@ -22,3 +23,4 @@ Need looking at further
 - [ ] Laser recoil
 - [ ] Area asymetry
 - [ ] Perimeter asymetry
+
