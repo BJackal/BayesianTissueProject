@@ -8,13 +8,13 @@ More will be added here soon for how to run this.
 **Writer outputs from Chaste that are necessary**
 
 - [x] Polygon Number - Usable version from Ecad ADD
-- [ ] Area Ratios
+- [x] Area Ratios - No explicit writer. Can be performed through combination of the polygon and Area writers.
 - [x] Cell perimeter - ADD
 - [x] Edge length
 - [x] Cell elongation
-- [ ] Area deviation
+- [x] Area deviation
 - [x] Area correlation (Outputs may need varificaiton as initialy produces nans)
-- [ ] Polygon number correlation
+- [ ] Polygon number correlation - Making from Ecad writer
 - [x] Neighbour Areas
 - [x] Neighbour numbers
 - [x] Neighbour numbers correlation
