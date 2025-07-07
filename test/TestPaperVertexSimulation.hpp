@@ -72,6 +72,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "FarhadifarForceWriter.hpp"
 #include "NeighbourNumberCorrelationWriter.hpp"
 #include "AreaCorrelationWriter.hpp"
+#include "CellEdgeCountWriter.hpp"
 
 #include "CommandLineArguments.hpp"
 
@@ -153,14 +154,17 @@ public:
 
         cell_population.SetRestrictVertexMovementBoolean(mRestrictVertexMovement);
 
+        // Cell writers
+        cell_population.AddCellWriter<VertexModelDataWriter>();
         cell_population.AddCellWriter<CellProliferativePhasesWriter>();
         cell_population.AddCellWriter<CellAgesWriter>();
+        cell_population.AddCellWriter<CellEdgeCountWriter>();
+        // Cell Population Writers
         cell_population.AddCellPopulationCountWriter<FarhadifarForceWriter>();
         cell_population.AddCellPopulationCountWriter<AreaCorrelationWriter>();
         cell_population.AddCellPopulationCountWriter<NeighbourNumberCorrelationWriter>();
-        cell_population.AddPopulationWriter<VertexEdgeLengthWriter>();
-        //cell_population.AddCellWriter<CellForcesWriter>(); // FIX NEEDED
-        //cell_population.AddPopulationWriter<VertexModelDataWriter>(); // FIX NEEDED
+        cell_population.AddPopulationWriter<VertexEdgeLengthWriter>(); 
+
 
         //cell_population.rGetMesh().SetCellRearrangementThreshold(0.2);
 
@@ -199,7 +203,7 @@ public:
         simulator.SetOutputDirectory("TestBaysianSimulation");
         simulator.SetSamplingTimestepMultiple(10);
         simulator.SetDt(0.01);
-        simulator.SetEndTime(100.00);
+        simulator.SetEndTime(2000.00);
 
         MAKE_PTR(FarhadifarForce<2>, p_force);
 
