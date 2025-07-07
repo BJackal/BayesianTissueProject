@@ -66,6 +66,14 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "WildTypeCellMutationState.hpp"
 #include "StemCellProliferativeType.hpp"
 
+#include "CellForcesWriter.hpp"
+#include "VertexEdgeLengthWriter.hpp"
+#include "VertexModelDataWriter.hpp"
+#include "FarhadifarForceWriter.hpp"
+#include "NeighbourNumberCorrelationWriter.hpp"
+#include "AreaCorrelationWriter.hpp"
+#include "CellEdgeCountWriter.hpp"
+
 #include "CommandLineArguments.hpp"
 
 
@@ -151,8 +159,16 @@ public:
 
         cell_population.SetRestrictVertexMovementBoolean(mRestrictVertexMovement);
 
+        // Cell writers
+        cell_population.AddCellWriter<VertexModelDataWriter>();
         cell_population.AddCellWriter<CellProliferativePhasesWriter>();
         cell_population.AddCellWriter<CellAgesWriter>();
+        cell_population.AddCellWriter<CellEdgeCountWriter>();
+        // Cell Population Writers
+        cell_population.AddCellPopulationCountWriter<FarhadifarForceWriter>();
+        cell_population.AddCellPopulationCountWriter<AreaCorrelationWriter>();
+        cell_population.AddCellPopulationCountWriter<NeighbourNumberCorrelationWriter>();
+        cell_population.AddPopulationWriter<VertexEdgeLengthWriter>(); 
 
         //cell_population.rGetMesh().SetCellRearrangementThreshold(0.2);
 
