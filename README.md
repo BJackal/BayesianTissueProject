@@ -7,7 +7,7 @@ More will be added here soon for how to run this.
     
 **Writer outputs from Chaste that are necessary**
 
-- [x] Polygon Number - Usable version from Ecad ADD
+- [x] Polygon Number
 - [x] Area Ratios - No explicit writer. Can be performed through combination of the polygon and Area writers.
 - [x] Cell perimeter - ADD
 - [x] Edge length
