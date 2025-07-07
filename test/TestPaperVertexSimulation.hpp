@@ -73,6 +73,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "NeighbourNumberCorrelationWriter.hpp"
 #include "AreaCorrelationWriter.hpp"
 #include "CellEdgeCountWriter.hpp"
+#include "PolygonNumberCorrelationWriter.hpp"
 
 #include "CommandLineArguments.hpp"
 
@@ -163,6 +164,7 @@ public:
         cell_population.AddCellPopulationCountWriter<FarhadifarForceWriter>();
         cell_population.AddCellPopulationCountWriter<AreaCorrelationWriter>();
         cell_population.AddCellPopulationCountWriter<NeighbourNumberCorrelationWriter>();
+        cell_population.AddCellPopulationCountWriter<PolygonNumberCorrelationWriter>();
         cell_population.AddPopulationWriter<VertexEdgeLengthWriter>(); 
 
 
