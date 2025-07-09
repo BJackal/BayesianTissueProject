@@ -14,7 +14,7 @@ This project contains a base test which can simulate tissues based on input hard
 - [x] Polygon Number
 - [x] Area Ratios - No explicit writer. Can be performed through combination of the polygon and Area writers.
 - [x] Cell perimeter
-- [x] Edge length
+- [x] Edge length - Note that this only produces the edge lengths for internal edges and not those on the boundary
 - [x] Cell elongation
 - [x] Area deviation
 - [x] Area correlation
