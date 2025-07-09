@@ -84,7 +84,7 @@ void VertexEdgeLengthWriter<ELEMENT_DIM, SPACE_DIM>::Visit(VertexBasedCellPopula
 
     MutableVertexMesh<SPACE_DIM,SPACE_DIM>& r_mesh = pCellPopulation->rGetMesh();
 
-	// Set up cell cycle and initial target areas
+	// Loop over cells
 	for (typename AbstractCellPopulation<SPACE_DIM>::Iterator cell_iter = pCellPopulation->Begin();
 			cell_iter != pCellPopulation->End();
 			++cell_iter)
@@ -95,7 +95,7 @@ void VertexEdgeLengthWriter<ELEMENT_DIM, SPACE_DIM>::Visit(VertexBasedCellPopula
 	    for (unsigned vertex_index = 0; vertex_index < num_nodes; vertex_index++)
 	    {
             Node<SPACE_DIM>* p_this_node = p_element->GetNode(vertex_index);
-            Node<SPACE_DIM>* p_next_node = p_element->GetNode((vertex_index+1)%num_nodes);
+            Node<SPACE_DIM>* p_next_node = p_element->GetNode((vertex_index == num_nodes - 1) ? 0 : vertex_index + 1);
 
             // Find the indices of the elements owned by each node
             std::set<unsigned> elements_containing_nodeA = p_this_node->rGetContainingElementIndices();
@@ -115,7 +115,7 @@ void VertexEdgeLengthWriter<ELEMENT_DIM, SPACE_DIM>::Visit(VertexBasedCellPopula
             	int other_element_index = *shared_elements.begin();
             	if(visited_elements.find(other_element_index) == visited_elements.end())
             	{
-            		edge_lengths.push_back( norm_2(  r_mesh.GetVectorFromAtoB(p_this_node->rGetLocation(), p_next_node->rGetLocation()) ) );
+            		edge_lengths.push_back( p_element->GetEdge(vertex_index)->rGetLength() );
             	}
             }
 	    }
