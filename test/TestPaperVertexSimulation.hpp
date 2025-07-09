@@ -74,6 +74,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "AreaCorrelationWriter.hpp"
 #include "CellEdgeCountWriter.hpp"
 #include "PolygonNumberCorrelationWriter.hpp"
+#include "CellPerimeterWriter.hpp"
 
 #include "CommandLineArguments.hpp"
 
@@ -160,11 +161,12 @@ public:
         cell_population.AddCellWriter<CellProliferativePhasesWriter>();
         cell_population.AddCellWriter<CellAgesWriter>();
         cell_population.AddCellWriter<CellEdgeCountWriter>();
+        cell_population.AddCellWriter<CellPerimeterWriter>();
         // Cell Population Writers
         cell_population.AddCellPopulationCountWriter<FarhadifarForceWriter>();
-        cell_population.AddCellPopulationCountWriter<AreaCorrelationWriter>();
-        cell_population.AddCellPopulationCountWriter<NeighbourNumberCorrelationWriter>();
+        cell_population.AddCellPopulationCountWriter<AreaCorrelationWriter>(); 
         cell_population.AddCellPopulationCountWriter<PolygonNumberCorrelationWriter>();
+        cell_population.AddCellPopulationCountWriter<NeighbourNumberCorrelationWriter>();
         cell_population.AddPopulationWriter<VertexEdgeLengthWriter>(); 
 
 
@@ -205,7 +207,7 @@ public:
         simulator.SetOutputDirectory("TestBaysianSimulation");
         simulator.SetSamplingTimestepMultiple(10);
         simulator.SetDt(0.01);
-        simulator.SetEndTime(2000.00);
+        simulator.SetEndTime(20.00);
 
         MAKE_PTR(FarhadifarForce<2>, p_force);
 
