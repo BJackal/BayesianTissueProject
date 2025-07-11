@@ -209,9 +209,9 @@ public:
          * and run the simulation. */
         OffLatticeSimulation<2> simulator(cell_population);
         simulator.SetOutputDirectory("TestBayesianCommandLineRun/Lambda_"+std::to_string(outp1)+"_Gamma_"+std::to_string(outp2));
-        simulator.SetSamplingTimestepMultiple(10);
+        simulator.SetSamplingTimestepMultiple(1);
         simulator.SetDt(0.01);
-        simulator.SetEndTime(10.00);
+        simulator.SetEndTime(700.00);
 
         MAKE_PTR(FarhadifarForce<2>, p_force);
 
