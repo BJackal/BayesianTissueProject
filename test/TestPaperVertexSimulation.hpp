@@ -100,8 +100,8 @@ public:
         double mT1SwapThreshold = 0.01;   // o 
         double mT2SwapThreshold = 0.001;  // o
         unsigned mInitialSize = 2u; // o 
-        double mLineTensionParameter = 0.0; // o // Lambda -0.85, 0.0 , 0.12
-        double mPerimeterContractilityParameter = 0.1; // o   // Gamma 0.1 , 0.1 , 0.04
+        double mLineTensionParameter = 0.12; // o // Lambda -0.85, 0.0 , 0.12
+        double mPerimeterContractilityParameter = 0.04; // o   // Gamma 0.1 , 0.1 , 0.04
         double mBoundaryTensionParameter = mLineTensionParameter; // o  
         //bool mUseRungeKuttaMethod = false;
         
@@ -205,9 +205,9 @@ public:
          * and run the simulation. */
         OffLatticeSimulation<2> simulator(cell_population);
         simulator.SetOutputDirectory("TestBaysianSimulation");
-        simulator.SetSamplingTimestepMultiple(10);
+        simulator.SetSamplingTimestepMultiple(100);
         simulator.SetDt(0.01);
-        simulator.SetEndTime(20.00);
+        simulator.SetEndTime(700.00);
 
         MAKE_PTR(FarhadifarForce<2>, p_force);
 
