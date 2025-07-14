@@ -204,14 +204,15 @@ public:
         }
 
         
-
+        
         /* We are now in a position to create and configure the cell-based simulation object, pass a force law to it,
          * and run the simulation. */
         OffLatticeSimulation<2> simulator(cell_population);
-        simulator.SetOutputDirectory("TestBayesianCommandLineRun/Lambda_"+std::to_string(outp1)+"_Gamma_"+std::to_string(outp2));
-        simulator.SetSamplingTimestepMultiple(100);
+
+        simulator.SetOutputDirectory("TestBayesianCommandLineRun/Lambda__"+CommandLineArguments::Instance()->GetStringCorrespondingToOption("-opt1")+"_Gamma_"+CommandLineArguments::Instance()->GetStringCorrespondingToOption("-opt2")+"_Run_"+CommandLineArguments::Instance()->GetStringCorrespondingToOption("-opt3")+"");
+        simulator.SetSamplingTimestepMultiple(10);
         simulator.SetDt(0.01);
-        simulator.SetEndTime(700.00);
+        simulator.SetEndTime(10.00);
 
         MAKE_PTR(FarhadifarForce<2>, p_force);
 
