@@ -7,30 +7,33 @@
 # Note this bash script should read all numbers in the bash script regardless of length
 # So one could begin with a single set of parameters (low fidelity) then supply 10 in the following runs (high fidelity)
 
-# -----   Begining of CSV ------
-#       Lambda     Gamma
-#          1         10
-#          2         9
-#          3         8
-#          4         7
-#          5         6
-#          6         5
-#          7         4
-#          8         3
-#          9         2
-#          10        1
-# -------   End of CSV --------
+# ------------   Begining of CSV -------------
+#       Lambda     Gamma      Runs
+#          1         10        3
+#          2         9         2
+#          3         8         2
+#          4         7         1
+#          5         6         1
+#          6         5         3
+#          7         4         2
+#          8         3         1
+#          9         2         1
+#          10        1         3
+# --------------   End of CSV  ----------------
 
 # Here we will create a loop that goes through each row and takes the given values for Lambda and Gamma
 
 
-while IFS="," read -r rec_column1 rec_column2
+while IFS="," read -r rec_column1 rec_column2 rec_column3
 do
+for ((i = 1; i <= $rec_column3; i += 1)); do
      echo "Lambda: $rec_column1"
      echo "Gamma: $rec_column2"
+     echo "Run: $i"
      ## Running simulation with read in parameters
-     ##~/bui/projects/BayesianTissueProject/test/TestPaperCommandLineVertexSimulation -opt1 $rec_column1 -opt2 $rec_column2 &
+     ~/bui/projects/BayesianTissueProject/test/TestPaperCommandLineVertexSimulation -opt1 $rec_column1 -opt2 $rec_column2 -opt3 $i &
      echo ""
+done
 done < <(tail -n +2 ~/Chaste/projects/BayesianTissueProject/ExampleCommandLineCSV.csv)
 # Echos that the simulations have all been ran, this does not mean they did not error.
 echo All done
