@@ -31,7 +31,7 @@ for ((i = 1; i <= $rec_column3; i += 1)); do
      echo "Gamma: $rec_column2"
      echo "Run: $i"
      ## Running simulation with read in parameters
-     ~/bui/projects/BayesianTissueProject/test/TestPaperCommandLineVertexSimulation -opt1 $rec_column1 -opt2 $rec_column2 -opt3 $i &
+     ~/build/projects/BayesianTissueProject/test/TestPaperCommandLineVertexSimulation -opt1 $rec_column1 -opt2 $rec_column2 -opt3 $i &
      echo ""
 done
 done < <(tail -n +2 ~/Chaste/projects/BayesianTissueProject/ExampleCommandLineCSV.csv)
