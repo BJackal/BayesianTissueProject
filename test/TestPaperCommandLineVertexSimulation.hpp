@@ -176,8 +176,8 @@ public:
 
         //cell_population.rGetMesh().SetCellRearrangementThreshold(0.2);
 
-        cell_population.SetWriteCellVtkResults(true);
-        cell_population.SetWriteEdgeVtkResults(true);
+        cell_population.SetWriteCellVtkResults(false);
+        cell_population.SetWriteEdgeVtkResults(false);
 
         CellPtr p_cell_0b = cell_population.GetCellUsingLocationIndex(3);
         
