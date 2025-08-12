@@ -41,6 +41,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "NodeBasedCellPopulation.hpp"
 #include "PottsBasedCellPopulation.hpp"
 #include "VertexBasedCellPopulation.hpp"
+#include "ImmersedBoundaryCellPopulation.hpp"
 #include "SimulationTime.hpp"
 #include <boost/accumulators/accumulators.hpp>
 #include <boost/accumulators/statistics.hpp>
@@ -111,6 +112,12 @@ void FarhadifarForceWriter<ELEMENT_DIM, SPACE_DIM>::Visit(VertexBasedCellPopulat
             boost::accumulators::mean(area_accumulator) << " " << sqrt( boost::accumulators::variance(area_accumulator) ) << " " <<
             boost::accumulators::mean(line_tension_accumulator) << " " << sqrt( boost::accumulators::variance(line_tension_accumulator) ) << " "<<
             boost::accumulators::mean(perimeter_accumulator) << " " << sqrt( boost::accumulators::variance(perimeter_accumulator) );
+}
+
+template<unsigned ELEMENT_DIM, unsigned SPACE_DIM>
+void AreaCorrelationWriter<ELEMENT_DIM, SPACE_DIM>::Visit(ImmersedBoundaryCellPopulation<SPACE_DIM>* pCellPopulation)
+{
+    EXCEPTION("This writer is supposed to be used with a VertexBasedCellPopulation only.");
 }
 
 template<unsigned ELEMENT_DIM, unsigned SPACE_DIM>
