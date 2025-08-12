@@ -214,7 +214,7 @@ void AreaCorrelationWriter<ELEMENT_DIM, SPACE_DIM>::Visit(VertexBasedCellPopulat
 }
 
 template<unsigned ELEMENT_DIM, unsigned SPACE_DIM>
-void AreaAndBoundaryWriter<ELEMENT_DIM, SPACE_DIM>::Visit(ImmersedBoundaryCellPopulation<SPACE_DIM>* pCellPopulation)
+void AreaCorrelationWriter<ELEMENT_DIM, SPACE_DIM>::Visit(ImmersedBoundaryCellPopulation<SPACE_DIM>* pCellPopulation)
 {
     EXCEPTION("AreaCorrelationWriter is not yet implemented for ImmersedBoundaryCellPopulation");
 }
