@@ -95,7 +95,7 @@ void NeighbourNumberCorrelationWriter<ELEMENT_DIM, SPACE_DIM>::Visit(PottsBasedC
 }
 
 template<unsigned ELEMENT_DIM, unsigned SPACE_DIM>
-void AreaCorrelationWriter<ELEMENT_DIM, SPACE_DIM>::Visit(ImmersedBoundaryCellPopulation<SPACE_DIM>* pCellPopulation)
+void NeighbourNumberCorrelationWriter<ELEMENT_DIM, SPACE_DIM>::Visit(ImmersedBoundaryCellPopulation<SPACE_DIM>* pCellPopulation)
 {
     EXCEPTION("This writer is supposed to be used with a VertexBasedCellPopulation only.");
 }
