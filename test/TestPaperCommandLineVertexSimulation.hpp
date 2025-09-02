@@ -176,8 +176,8 @@ public:
 
         //cell_population.rGetMesh().SetCellRearrangementThreshold(0.2);
 
-        cell_population.SetWriteCellVtkResults(false);
-        cell_population.SetWriteEdgeVtkResults(false);
+        cell_population.SetWriteCellVtkResults(true);
+        cell_population.SetWriteEdgeVtkResults(true);
 
         CellPtr p_cell_0b = cell_population.GetCellUsingLocationIndex(3);
         
@@ -209,7 +209,7 @@ public:
          * and run the simulation. */
         OffLatticeSimulation<2> simulator(cell_population);
 
-        simulator.SetOutputDirectory("TestBayesianCommandLineRun/Lambda__"+CommandLineArguments::Instance()->GetStringCorrespondingToOption("-opt1")+"_Gamma_"+CommandLineArguments::Instance()->GetStringCorrespondingToOption("-opt2")+"_Run_"+CommandLineArguments::Instance()->GetStringCorrespondingToOption("-opt3")+"");
+        simulator.SetOutputDirectory("TestBayesianCommandLineRun/_Sim_Number_"+CommandLineArguments::Instance()->GetStringCorrespondingToOption("-opt4")+"Lambda__"+CommandLineArguments::Instance()->GetStringCorrespondingToOption("-opt1")+"_Gamma_"+CommandLineArguments::Instance()->GetStringCorrespondingToOption("-opt2")+"_Run_"+CommandLineArguments::Instance()->GetStringCorrespondingToOption("-opt3")+"");
         simulator.SetSamplingTimestepMultiple(10);
         simulator.SetDt(0.01);
         simulator.SetEndTime(10.00);
@@ -243,6 +243,9 @@ public:
     }
 
 };
+
+
+#endif /*TESTPAPERVERTEXSIMULATION_HPP_*/
 
 
 #endif /*TESTPAPERVERTEXSIMULATION_HPP_*/
